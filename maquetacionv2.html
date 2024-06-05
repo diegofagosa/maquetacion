@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maquetación de página web ☺</title>
+    <style>
+        body {
+            background-color: white;
+            
+        }
+
+        table {
+            position: relative;
+            left: 150px;
+        }
+
+        .logo {
+            position: relative; left: 10px; top: 25px;
+            width: 55px;
+            
+            
+        }
+        .menu {
+            background-color: #ffff;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            z-index: 0;
+        }
+
+        .dropleft {
+            position: absolute; left: 285px; bottom: 1790px;
+            display: inline-block;
+        }
+    
+    .dropdown-content {
+        display: none;
+        position: relative; right: 170px; top: 630px;
+        background-color: #ffff;
+        width: 250px;
+        height: 700px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 2;
+    }
+  
+    .dropdown-content a {
+        position: relative; top: 100px;
+        color: black;
+        font-family: Inter;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        z-index: 2;
+        
+    }
+    .new_menu {
+        background-color: #ffff;
+        width: 72px;
+        height: 52px;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            z-index: 3;
+            display: none;
+    }
+  
+    .dropdown-content a:hover {background-color: #ddd;}
+  
+    .dropleft:hover .dropdown-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropleft:hover .menu {background-color: #ffff; display: none;} 
+
+    .dropleft:hover .new_menu {display: inline; position: relative; right: 0px; top: 700px;}
+
+
+        .imagen {
+            position: relative ; left: 7px; top: 60px;
+            width: 335px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .titulo_principal {
+            position: relative; left: 7px; top: 75px;
+            font-family: Inter ExtraBold; color:rgb(0, 0, 28);
+            font-size: 42px;
+            width: fit-content;
+            height: fit-content;
+
+        }
+
+        .texto_peque_1 {
+            position: relative; left: 7px; top: 85px;
+            font-family: Inter;
+            font-size: 15px;
+            line-height: 25px;
+            color: rgb(88, 86, 91);
+        }
+
+        .boton {
+            position: relative; left: 7px; top: 115px;
+            width: 178px;
+            height: 40px;
+            font-family: Inter ExtraBold;
+            text-align: center;
+            line-height: 40px;
+            letter-spacing: 3px;
+            background-color: rgb(240, 94, 79);
+            color: rgb(25, 0, 0);
+            transition: 1s;
+        }
+
+        .boton:hover {
+            color: rgb(238, 237, 251);
+            background-color: rgb(0, 0, 26);
+        }
+
+        .cuadro {
+            position: relative; left: 7px; top: 190px;
+            width: 335px;
+            height: 470px;
+            background: rgb(0, 0, 26);
+        }
+
+        .new {
+            position: relative; left: 30px; top: -260px;
+            font-family: Inter ExtraBold;
+            color:rgb(236, 170, 84);
+            font-size: 30px;
+        }
+
+        .titulo_cuadro1 {
+            position: relative; left: 30px; top: -225px;
+            font-family: Inter ExtraBold;
+            font-size: 20px;
+            color: rgb(250, 251, 254);
+            transition: 1s;
+        }
+    
+        .titulo_cuadro1:hover {
+            color: rgb(236, 178, 99);
+        }
+
+        .titulo_cuadro2 {
+            position: relative; left: 30px; top: -170px;
+            font-family: Inter ExtraBold;
+            font-size: 20px;
+            color: rgb(250, 251, 254);
+            transition: 1s;
+        }
+    
+        .titulo_cuadro2:hover {
+            color: rgb(236, 178, 99);
+        }
+
+        .titulo_cuadro3 {
+            position: relative; left: 30px; top: -100px;
+            font-family: Inter ExtraBold;
+            font-size: 20px;
+            color: rgb(250, 251, 254);
+            transition: 1s;
+        }
+    
+        .titulo_cuadro3:hover {
+            color: rgb(236, 178, 99);
+        }
+
+        .texto_cuadro1 {
+            position: relative; left: 30px; top: -220px;
+            font-family: Inter;
+            font-size: 15px;
+            line-height: 25px;
+            color: rgb(141, 142, 162);
+        }
+
+        .texto_cuadro2 {
+            position: relative; left: 30px; top: -160px;
+            font-family: Inter;
+            font-size: 15px;
+            line-height: 25px;
+            color: rgb(141, 142, 162);
+        }
+
+        .texto_cuadro3 {
+            position: relative; left: 30px; top: -90px;
+            font-family: Inter;
+            font-size: 14px;
+            line-height: 25px;
+            color: rgb(141, 142, 162);
+        }
+
+        .linea1 {
+            position: relative; left: 30px; top: -200px;
+            width: 290px;
+            height: 1px;
+            background: rgb(95, 95, 121);
+        }
+
+        .linea2 {
+            position: relative; left: 30px; top: -130px;
+            width: 290px;
+            height: 1px;
+            background: rgb(95, 95, 121);
+        }
+
+        .retro {
+            position: relative ; left: 7px; top: -10px;
+            width: 95px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .num1 {
+            position: relative; left: 125px; top: -140px;
+            color: rgb(233, 101, 86);
+            font-family: Inter ExtraBold;
+            font-size: 30px;
+        }
+
+        .noticia1 {
+            position: relative; left: 125px; top: -130px;
+            color:  rgb(12, 9, 28);
+            font-family: Inter ExtraBold;
+            font-size: 16px;
+            transition: 1s;
+        }
+
+        .noticia1:hover {
+            color: rgb(231, 108, 106);
+        }
+
+        .texto_noticia1 {
+            position: relative; left: 125px; top: -120px;
+            color: rgb(112, 112, 124);
+            font-family: Inter;
+            font-size: 14px;
+            line-height: 25px;
+        }
+        .laptop {
+            position: relative ; left: 7px; top: -90px;
+            width: 95px;
+            height: 120.65px;
+            object-fit: contain;
+        }
+
+        .num2 {
+            position: relative; left: 125px; top: -240px;
+            color: rgb(233, 101, 86);
+            font-family: Inter ExtraBold;
+            font-size: 30px;
+        }
+
+        .noticia2 {
+            position: relative; left: 125px; top: -210px;
+            color:  rgb(12, 9, 28);
+            font-family: Inter ExtraBold;
+            font-size: 16px;
+            transition: 1s;
+        }
+
+        .noticia2:hover {
+            color: rgb(231, 108, 106);
+        }
+
+        .texto_noticia2 {
+            position: relative; left: 125px; top: -200px;
+            color: rgb(112, 112, 124);
+            font-family: Inter;
+            font-size: 14px;
+            line-height: 25px;
+        }
+
+        .gaming {
+            position: relative ; left: 7px; top: -160px;
+            width: 95px;
+            height: 120.65px;
+            object-fit: contain;
+        }
+        
+        .num3 {
+            position: relative; left: 125px; top: -290px;
+            color: rgb(233, 101, 86);
+            font-family: Inter ExtraBold;
+            font-size: 30px;
+        }
+
+        .noticia3 {
+            position: relative; left: 125px; top: -280px;
+            color:  rgb(12, 9, 28);
+            font-family: Inter ExtraBold;
+            font-size: 16px;
+            transition: 1s;
+        }
+
+        .noticia3:hover {
+            color: rgb(231, 108, 106);
+        }
+        
+        .texto_noticia3 {
+            position: relative; left: 125px; top: -270px;
+            height: 50px;
+            width: 200px;
+            color: rgb(112, 112, 124);
+            font-family: Inter;
+            font-size: 14px;
+            line-height: 25px;
+        }
+
+        .home {
+            font-family: Inter;
+            color: rgb(107, 109, 114);
+            display: none;
+            transition: 1s;
+        }
+        .home:hover {
+            color: rgb(211, 128, 124);
+        }
+        .new2 {
+            font-family: Inter;
+            color: rgb(107, 109, 114);
+            display: none;
+            transition: 1s;
+        }
+        .new2:hover {
+            color: rgb(211, 128, 124);
+        }
+
+        .popular {
+            font-family: Inter;
+            color: rgb(107, 109, 114);
+            display: none;
+            transition: 1s;
+        }
+        .popular:hover {
+            color: rgb(211, 128, 124);
+        }
+
+        .trending {
+            font-family: Inter;
+            color: rgb(107, 109, 114);
+            display: none;
+            transition: 1s;
+        }
+        .trending:hover {
+            color: rgb(211, 128, 124);
+        }
+        
+        .categories {
+            font-family: Inter;
+            color: rgb(107, 109, 114);
+            display: none;
+            transition: 1s;
+        }
+        .categories:hover {
+            color: rgb(211, 128, 124);
+        }
+
+        @media (min-width: 600px) {
+            .logo {
+                position: relative; left: 120px; top: 35px;
+                width: 65px;
+                
+            }
+            .menu {
+                display: none;
+            }
+            .imagen {
+                width: 720px;
+                height: 295.883px;
+                position: relative; left: 120px; top: 100px;
+            }
+
+            .titulo_principal {
+                position: relative; left: 120px; top: 140px;
+                font-size: 54px;
+                width: 300px;
+                height: 195px;
+            }
+            .texto_peque_1 {
+                position: relative; left: 490px; top: -45px;
+            }
+            .boton {
+                position: relative; left: 490px; top: -10px;
+            }
+            .cuadro {
+                position: relative; left: 875px; top: -535px;
+                width: 350px;
+                height: 520px;
+            }
+            .new {
+                position: relative; left:  900px; top: -1026px;
+                font-size:38px;
+            }
+            .titulo_cuadro1 {
+                position: relative; left: 900px; top: -986px;
+                font-size: 20px;
+            }
+            .titulo_cuadro2 {
+                position: relative; left: 900px; top: -915px;
+                font-size: 20px;
+            }
+            .titulo_cuadro3 {
+                position: relative; left: 900px; top: -845px;
+                font-size: 20px;
+            }
+            .texto_cuadro1 {
+                position: relative; left: 900px; top: -975px;
+                font-size: 15px;
+            }
+            .texto_cuadro2 {
+                position: relative; left: 900px; top: -900px;
+                font-size: 15px;
+            }
+            .texto_cuadro3 {
+                position: relative; left: 900px; top: -835px;
+                font-size: 15px;
+            }
+            .linea1 {
+                position: relative; left: 900px; top: -950px;
+                width: 290px;
+                background: rgb(95, 95, 121);
+            }
+            .linea2 {
+                position: relative; left: 900px; top: -875px;
+                width: 290px;
+                background: rgb(95, 95, 121);
+            }
+            .retro {
+                width: 95px;
+                height: 120.65px;
+                position: relative; left: 120px; top: -720px;
+            }
+            .num1 {
+                position: relative; left: 240px; top: -850px;
+            }
+            .noticia1 {
+                position: relative; left: 240px; top: -840px;
+            }
+            .texto_noticia1 {
+                position: relative; left: 240px; top: -830px;
+            }
+            .laptop {
+                width: 95px;
+                height: 120.65px;
+                position: relative; left: 490px; top: -950px;
+            }
+            .num2 {
+                position: relative; left: 620px; top: -1080px;
+            }
+            .noticia2 {
+                position: relative; left: 620px; top: -1070px;
+            }
+            .texto_noticia2 {
+                position: relative; left: 620px; top: -1060px;
+            }
+            .gaming {
+                width: 95px;
+                height: 120.65px;
+                position: relative; left: 875px; top: -1180px;
+            }
+            .num3 {
+                position: relative; left: 1000px; top: -1310px;
+            }
+            .noticia3 {
+                position: relative; left: 1000px; top: -1300px;
+            }
+            .texto_noticia3 {
+                width: 230px;
+                height: 50px;
+                position: relative; left: 1000px; top: -1290px;
+            }
+            .home {
+                display: initial;
+                position: relative; left: 800px; top: -2107px;
+            }
+            .new2 {
+                display: initial;
+                position: relative; left: 826px; top: -2107px;
+            }
+            .popular {
+                display: initial;
+                position: relative; left: 866px; top: -2107px;
+            }
+            .trending {
+                display: initial;
+                position: relative; left: 890px; top: -2107px;
+            }
+            .categories {
+                display: initial;
+                position: relative; left: 930px; top: -2107px;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div><img src="logo.svg" class="logo"></div>
+    <div class="dropleft">
+        <button class="menu"><img src="icon-menu.svg"></button>
+        <button class="new_menu"><img src="icon-menu-close.svg"></button>
+        <div class="dropdown-content">
+          <a href="#">Home</a>
+          <a href="#">New</a>
+          <a href="#">Popular</a>
+          <a href="#">Trending</a>
+          <a href="#">Categories</a>
+        </div>
+    </div>
+    <div><picture>
+        <source srcset="image-web-3-mobile.jpg " media="(max-width: 600px)">
+        <source srcset="image-web-3-desktop.jpg " media="(max-width: 1500px)">
+        <img src="image-web-3-mobile.jpg" alt="" class="imagen">
+      </picture> 
+    </div>
+    <div class="titulo_principal">The Bright Future of Web 3.0?</div>
+    <div class="texto_peque_1">We dive into the next evolution of the web that <br> claims to put the power of the platforms back <br> into the hands of the people. But is really <br> fulfilling its promise?</div>
+    <div class="boton" >READ MORE</div>
+    <div class="cuadro"></div>
+    <div class="new">New</div>
+    <div class="titulo_cuadro1">Hydrogen VS Electric Cars</div>
+    <div class="texto_cuadro1">Will hydrogen-fueled cars ever catch up to <br> EVs?</div>
+    <div class="linea1"></div>
+    <div class="titulo_cuadro2">The Downsides of AI Artistry</div>
+    <div class="texto_cuadro2">What are the possible adverse effects of <br> on-demand AI image generation?</div>
+    <div class="linea2"></div>
+    <div class="titulo_cuadro3">Is VC Funding Drying Up?</div>
+    <div class="texto_cuadro3">Private funding by VC firms is down 50% <br> YOY. We take a look at what that means.</div>
+    <div><img src="image-retro-pcs.jpg" class="retro"></div>
+    <div class="num1">01</div>
+    <div class="noticia1">Reviving Retro PCs</div>
+    <div class="texto_noticia1">What happends when old PCs <br> are given modern upgrades?</div>
+    <div><img src="image-top-laptops.jpg" class="laptop"></div>
+    <div class="num2">02</div>
+    <div class="noticia2">Top 10 Laptops of 2022</div>
+    <div class="texto_noticia2">Our best picks for various <br> needs and budgets.</div>
+    <div><img src="image-gaming-growth.jpg" class="gaming"></div>
+    <div class="num3">03</div>
+    <div class="noticia3">The Growth of Gaming</div>
+    <div class="texto_noticia3">How the pandemic has sparked fresh opportunities.</div>
+    <div class="home">Home</div>
+    <div class="new2">New</div>
+    <div class="popular">Popular</div>
+    <div class="trending">Trending</div>
+    <div class="categories">Categories</div>
+    
+</body>
+</html>
